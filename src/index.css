@@ -1,0 +1,240 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Import Monda font */
+@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap');
+
+/* Custom animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+}
+
+@keyframes grid-move {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(50px, 50px);
+    }
+}
+
+@keyframes dataFlow {
+    0% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(300px);
+        opacity: 0;
+    }
+}
+
+@keyframes barPulse {
+    0%, 100% {
+        transform: scaleY(0.3);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+/* Custom font classes */
+.font-monda {
+    font-family: 'Monda', sans-serif;
+}
+
+/* Custom gradient backgrounds */
+.bg-custom-gradient-primary {
+    background: linear-gradient(to right, #6AE6CF, #4395AD);
+}
+
+.bg-custom-gradient-secondary {
+    background: linear-gradient(to right, #07173B, #462877);
+}
+
+.bg-custom-gradient-tertiary {
+    background: linear-gradient(to right, #462877, #6AE6CF);
+}
+
+.bg-custom-gradient-quaternary {
+    background: linear-gradient(to right, #4395AD, #07173B);
+}
+
+/* Custom gradient text */
+.text-custom-gradient-primary {
+    background: linear-gradient(to right, #6AE6CF, #4395AD);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.text-custom-gradient-secondary {
+    background: linear-gradient(to right, #6AE6CF, #6AE6CF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.text-custom-gradient-tertiary {
+    background: linear-gradient(to right, #6AE6CF, #462877, #4395AD);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Custom colors */
+.border-custom-cyan {
+    border-color: #6AE6CF;
+}
+
+.text-custom-cyan {
+    color: #6AE6CF;
+}
+
+.text-custom-blue {
+    color: #4395AD;
+}
+
+.text-custom-purple {
+    color: #462877;
+}
+
+/* Custom hover states */
+.hover\:text-custom-cyan:hover {
+    color: #6AE6CF;
+}
+
+.hover\:bg-custom-cyan:hover {
+    background-color: #6AE6CF;
+}
+
+.hover\:border-custom-cyan:hover {
+    border-color: #6AE6CF;
+}
+
+.hover\:border-custom-purple:hover {
+    border-color: #462877;
+}
+
+/* Animation classes */
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+.grid-move-animation {
+    animation: grid-move 20s linear infinite;
+}
+
+.data-flow-animation {
+    animation: dataFlow 3s ease-in-out infinite;
+}
+
+.bar-pulse-animation {
+    animation: barPulse 1.5s ease-in-out infinite;
+}
+
+/* Fade in animation for sections */
+.fade-in-section {
+    transition: all 0.8s ease-out;
+}
+
+/* Particle styles */
+.floating-particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    opacity: 0.3;
+    background-color: #6AE6CF;
+}
+
+/* Neural network node styles */
+.neural-node {
+    border-radius: 50%;
+    position: absolute;
+}
+
+.neural-node-input {
+    width: 12px;
+    height: 12px;
+    background-color: #6AE6CF;
+    box-shadow: 0 0 10px rgba(106, 230, 207, 0.5);
+}
+
+.neural-node-hidden1 {
+    width: 16px;
+    height: 16px;
+    background-color: #4395AD;
+    box-shadow: 0 0 8px rgba(67, 149, 173, 0.5);
+}
+
+.neural-node-hidden2 {
+    width: 16px;
+    height: 16px;
+    background-color: #462877;
+    box-shadow: 0 0 8px rgba(70, 40, 119, 0.5);
+}
+
+.neural-node-output {
+    width: 20px;
+    height: 20px;
+    background-color: #6AE6CF;
+    box-shadow: 0 0 12px rgba(106, 230, 207, 0.7);
+}
+
+/* Service card styles */
+.service-card {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(106, 230, 207, 0.2);
+}
+
+/* Testimonial card styles */
+.testimonial-card {
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Button styles */
+.cta-button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+.cta-button-overlay {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cta-button:hover .cta-button-overlay {
+    opacity: 1;
+}
